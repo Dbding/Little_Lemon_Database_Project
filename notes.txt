@@ -1,0 +1,21 @@
+Little Lemon Database Project Notes
+
+Database name:
+little_lemon_db
+
+MySQL user:
+root
+
+Password:
+<replace_with_your_local_mysql_password>
+
+Important:
+The rubric specifically asks for:
+- File named LittleLemonDM.png
+- GetMaxQuantity() output = 5
+- ManageBooking() books an available table and rejects an already reserved table
+- AddBooking(99, 99, 99, '2022-12-10')
+- UpdateBooking(99, '2022-01-10')
+- CancelBooking(99)
+
+These cases are included in the SQL file and Python client.

@@ -1,0 +1,44 @@
+erDiagram
+    CUSTOMERS ||--o{ BOOKINGS : makes
+    CUSTOMERS ||--o{ ORDERS : places
+    MENU ||--o{ ORDERS : selected_in
+    ORDERS ||--o{ ORDER_DELIVERY_STATUS : has
+
+    CUSTOMERS {
+        int CustomerID PK
+        varchar FullName
+        varchar ContactNumber
+        varchar Email
+    }
+
+    BOOKINGS {
+        int BookingID PK
+        date BookingDate
+        int TableNumber
+        int CustomerID FK
+    }
+
+    MENU {
+        int MenuID PK
+        varchar Cuisine
+        varchar Starter
+        varchar Course
+        varchar Dessert
+        varchar Drink
+    }
+
+    ORDERS {
+        int OrderID PK
+        date OrderDate
+        int Quantity
+        decimal TotalCost
+        int CustomerID FK
+        int MenuID FK
+    }
+
+    ORDER_DELIVERY_STATUS {
+        int DeliveryID PK
+        int OrderID FK
+        date DeliveryDate
+        varchar Status
+    }
